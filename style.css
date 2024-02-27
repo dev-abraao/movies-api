@@ -12,6 +12,7 @@ body{
     display: flex;
     gap: 20px;
     text-align: center;
+    margin: auto;
 }
 
 header{
@@ -38,6 +39,7 @@ header{
     border-radius: 50px;
     padding: 50px;
     height: 500px;
+    visibility: hidden;
 }
 
 .poster{
@@ -89,6 +91,49 @@ h1{
 
 .movie-title::before{
     content: "« ";
+    color: #DBA506;   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+form input{
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: thin grey solid;
+    border-radius: 50px;
+    padding: 10px;
+    font-family: "Poppins";
+    font-size: larger;
+    text-decoration: none;
+}
+
+label{
+    padding: 20px 0px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: black;
+    width: 500px;
+    align-self: center;
+}
+
+.errpopup{
+    visibility: hidden;
+    color: red;
+    border-radius: 25px;
+    width: 200px;
+    align-self: center;
+}
+
+input[type=submit]{
+    border: none;
+    background-color: rgb(34, 34, 34);
     color: #DBA506;
-    
 }
