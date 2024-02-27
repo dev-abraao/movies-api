@@ -8,14 +8,18 @@ const diretor = document.querySelector(".diretor")
 const rating = document.querySelector(".rating")
 const form = document.getElementById("form1")
 const formulario = document.getElementById("formulario")
-let testando = "Donnie Darko"
+let testando = "Dead Poets Society"
 
-formulario.addEventListener('submit',  function(e) {
-    testando = form.value;
-    dadosFilme();
-    // impede o envio do form
-    e.preventDefault();
-});
+function submitForm(event){
+    event.preventDefault();
+
+    if (form.value.length !== 0 ){
+        testando = form.value;
+        dadosFilme();
+    } else {
+        alert("Please Insert a Movie Title")
+    }
+}
 
 async function dadosFilme() {  
     
@@ -35,3 +39,4 @@ async function dadosFilme() {
     console.log(data)   
 }
 // chamada da função
+dadosFilme();
