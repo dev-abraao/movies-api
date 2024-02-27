@@ -1,0 +1,94 @@
+html{
+    font-family: "Poppins";
+    color: white;
+}
+
+body{
+    margin: auto;
+    background: #DBA506;
+}
+
+.head-container{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+header{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+}
+
+.material-symbols-outlined{
+    align-self: center;
+}
+
+.wrapper-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.hero-container{
+    display: flex;
+    border:  1px rgb(54, 54, 54)id;
+    background-color: rgb(34, 34, 34);
+    border-radius: 50px;
+    padding: 50px;
+    height: 500px;
+}
+
+.poster{
+    height: 500px;
+    border-radius: 20px;
+}
+
+.movie-info{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    max-width: 350px;
+    padding-left: 40px;
+}
+
+.movie-title{
+    margin: 0;
+}
+
+.diretor{
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.sinopse{
+    align-self: flex-end;
+    background: #1b1b1b;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin: 0;
+    align-items: flex-start;
+
+}
+
+.movies{
+    color: #DBA506;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.movie-title::before{
+    content: "« ";
+    color: #DBA506;
+    
+}
