@@ -5,7 +5,8 @@ html{
 
 body{
     margin: auto;
-    background: #DBA506;
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, rgba(34,34,34,1) 0%, rgba(219,165,6,1) 50%);
 }
 
 .head-container{
@@ -17,6 +18,7 @@ body{
 
 header{
     background-color: rgb(34, 34, 34);
+    box-shadow: 10px 0px 15px  rgb(0, 0, 0);
     display: flex;
     justify-content: center;
 }
@@ -26,6 +28,7 @@ header{
 }
 
 .wrapper-hero{
+    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +69,6 @@ header{
 }
 
 .sinopse{
-    align-self: flex-end;
     background: #1b1b1b;
     border-radius: 20px;
     padding: 20px;
@@ -82,7 +84,7 @@ header{
 }
 
 .movies{
-    color: #DBA506;
+    color: rgba(219,165,6,1);
 }
 
 h1{

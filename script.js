@@ -1,6 +1,6 @@
 // pegando o DOM
 const imagem = document.querySelector(".poster")
-let titulo = document.querySelector(".movie-title")
+const titulo = document.querySelector(".movie-title")
 const sinopse = document.querySelector(".sinopse")
 const genero = document.querySelector(".genre")
 const diretor = document.querySelector(".diretor")
@@ -8,15 +8,25 @@ const rating = document.querySelector(".rating")
 const form = document.getElementById("form1")
 const formulario = document.getElementById("formulario")
 const hero = document.querySelector(".hero-container")
-const bttn = document.getElementsByTagName("submit")
+const bttn = document.querySelector('input[type="submit"]')
 const popup = document.querySelector(".errpopup")
-let testando;
+const wrapper = document.querySelector(".wrapper-hero")
+let moviename;
+
+function changeBtnColor(){
+    bttn.style.background = "rgb(24, 24, 24)";
+};
+
+function resetBtnColor(){
+    bttn.style.background = "rgb(34, 34, 34)";
+}
 
 function submitForm(event){
     event.preventDefault();
 
     if (form.value.length){
-        testando = form.value;
+        moviename = form.value;
+        wrapper.style.visibility = "visible"
         dadosFilme();
         
     } else {
@@ -37,7 +47,7 @@ function updateHTML(data){
 async function dadosFilme() {  
     
     // request da API
-    const response = await fetch(`http://www.omdbapi.com/?apikey=7fdec854&t=${testando}`)
+    const response = await fetch(`http://www.omdbapi.com/?apikey=7fdec854&t=${moviename}`)
     const data = await response.json()
 
     // mudando o conteudo de texto
@@ -54,6 +64,3 @@ async function dadosFilme() {
      }
      console.log(data)
 }
-
-
-// chamada da função
